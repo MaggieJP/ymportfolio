@@ -1,0 +1,408 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Courier, monospace;
+}
+
+html, body {
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;  /*initial body height take 100% of viewport height*/
+  background-color: #f2f3f7;
+}
+
+.btnwrap {
+  /* could not:  display: flex;  to achieve vertical alignment*/
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 199;
+}
+
+.btnwrap .btn {
+  display: block;
+  height: 70px;
+  width: 70px;
+  margin: 15px 0px;
+  text-align: center;
+  /* float: left; */
+  overflow: hidden;
+  background-color: #f2f3f7;
+  box-shadow: 0.6rem 0.6rem 1.2rem #d2dce9, -0.5em -0.5em 1em #ffffff;
+  border-radius: 3rem;
+  transition: all 0.4s ease-out;
+  cursor: pointer;
+}
+
+.btn .icon {
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  border-radius: 1rem;
+  float: left;
+  /* box-shadow: inset -7px, -7px 20px 0; */
+}
+
+.btn .icon img {
+  display: block;
+  margin: 12px 13px;
+  width: 45px;
+  height: 45px;
+  line-height: 70px;
+}
+
+.btn span {
+  /* text-align: center; */
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 70px;
+  color:#646669
+}
+
+
+.btn:hover {
+  width: 260px;
+  /* background-color: rgb(229, 229, 229); */
+  transition: all 0.4s ease-out;
+}
+.btn:active {
+  background-color: #646669;
+}
+
+.btnwrap .avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  width: 220px;
+  margin: 15px 0px;
+  background-color: #f2f3f7;
+  box-shadow: 0.6rem 0.6rem 1.2rem #d2dce9, -0.5em -0.5em 1em #ffffff;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+.btnwrap .avatar img {
+  width: 86%;
+  height: 86%;
+  border-radius: 50%;
+  transition: transform 0.6s;
+}
+
+.btnwrap .avatar:hover img {
+  transform: scale(1.5);
+}
+
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container .blur-container {
+  display: inherit;
+  width: 900px;
+  height: 200px;
+  margin: 2rem 9rem;
+  border-radius: 3rem;
+  background-image: url('https://images.unsplash.com/photo-1592093474530-86874167e896?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=701&q=80');
+  background-size: cover;
+
+  color: #fff;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.blur-container:before {
+  z-index: -1;
+  position: absolute;
+  content: '';
+  background: inherit;
+  left: 30px;
+  right: 30px;
+  top: 30px;
+  bottom: 30px;
+  box-shadow: inset 0 0 0 2000px rgba(150, 150, 150, 0.2);
+  filter: blur(3px);
+  border-radius: 3rem;
+}
+
+.footer-container {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+}
+
+.footer-container .footer {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  margin-top: 6rem;
+}
+
+
+.static-txt-container {
+  display: block;
+  text-align: center;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+}
+
+.static-content {
+  color: #646669;
+  font-size: 40px;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper .ul-container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 90px;
+  /* border: 1px solid black; */
+  text-align: center;
+  background-color: #f2f3f7;
+  border-radius: 5rem;
+  box-shadow: 0.6rem 0.6rem 1.2rem #d2dce9, -0.5em -0.5em 1em #ffffff;
+}
+
+
+.dynamic-txt {
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;   
+}
+
+.dynamic-txt li {
+  list-style: none;
+  font-size: 40px;
+  font-weight: 700;
+  color: #646669;
+  position: relative;
+  top: 0;
+  animation: slideup 21s steps(7) infinite;
+}
+
+@keyframes slideup {
+  100%{top: -630px;}  /*sliding up animation -> # of lines X each line height*/
+}
+
+.dynamic-txt li span {
+  position: relative;  /*for span::after absolute positioning*/
+  line-height: 90px;
+}
+
+.dynamic-txt li span::after {
+  content: "";
+  /* z-index: 99; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-left: 3px solid #646669;
+  /* background-color: rgba(233,0,2,0.3); */
+  background-color: #f2f3f7;
+  animation: typing 3s steps(20) infinite;
+}
+
+@keyframes typing {
+  100%{left: 110%;}
+}
+
+
+.subtitle {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  /* text-align: center; */
+  color: #646669;
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  word-spacing: 6px;
+  background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+  background-size: 400%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text; /*???? why css lint ask to also define this???*/
+  animation: glitter 22s linear infinite;
+}
+@keyframes glitter{
+  0%{background-position: 0%;}
+  100%{background-position: 400%;}
+}
+
+
+hr {
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 9px 9px -11px rgba(0, 0, 0, 0.3);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.content-wrapper {
+  display: flex;
+  margin-top: 4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  width: 800px;
+  text-align: center;
+  overflow: visible;  /*!! this's a fixed container for every component, not flexbox*/
+}
+
+.slider > a {
+  display: inline-flex;  /*!!!*/
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  padding-bottom: 2px;  /*because the anchor has underline(even hidden) -> padding bottom will push content upwards*/
+  border-radius: 50%;  /*make it round circle*/
+  margin-right: 5px;
+  margin-left: 5px;
+  text-decoration: none;  /*remove anchor link underline!!*/
+  justify-content: center;
+  align-items: center;  /*flex-end*/
+  background: rgba(172, 172, 172, 0.3);
+  color: #c600c0;;
+}
+
+.slider > a:active {  /*action setting when link is being clicked*/
+  background: #646669;
+}
+
+.slidescontainer {
+  display: flex;
+  overflow-x: auto;  /* !!KEY CSS settomg!! value takes: visible; hidden; scroll; auto; HERE, auto ~= scroll */
+  scroll-behavior: smooth;  /*values: auto; smooth*/
+  scroll-snap-type: x mandatory;
+  /*-webkit-overflow-scrolling: touch;*/  /*non-essential: sets the momentum of scrolling for touch devices*/
+  padding: 2rem;  /* !!!shadow purpose*/
+}
+
+.slidescontainer::-webkit-scrollbar {  /*pseudo-element*/
+  /*width: 2rem;*/  /*horizontal scrollbar seems not affected by width*/
+  height: 1rem;
+}
+
+.slidescontainer::-webkit-scrollbar-thumb {  /*thumb: draggable scroll handle*/
+  background: rgba(128, 128, 128, 0.5);
+  border-radius: 8px;  /*also affected by thumb height, this value saturated after 10px.. */
+}
+
+.slidescontainer::-webkit-scrollbar-thumb:hover {
+  background: #646669;
+}
+
+.slidescontainer::-webkit-scrollbar-track {  /*track: progress bar of the scrollbar, usually is gray on top of a white thumb*/
+  background: transparent;  /*lightgray transparent*/
+}
+
+
+.slidescontainer > div {
+  scroll-snap-align: center;  /*define how page/slide displays/snaps when click anchor links*/
+  flex-shrink: 0;  /*Necessary! if all flex items larger than flex container, items WILL shrink to fit*/
+  width: 90%;  /* !!!shadow purpose*/
+  height: 300px;
+  margin-left: 3rem;
+  margin-right: 3rem;  /* Necessary! for appearance of separated slides */
+  border-radius: 3rem;
+  box-shadow: 0.6rem 0.6rem 1.2rem #d2dce9, -0.3em -0.3em 0.6em #ffffff;
+  display: flex;
+  justify-content: center; 
+  align-items: center;  
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.slidescontainer #slide-1, #slide-2, #slide-3, #slide-4 {
+  /*display: flex;*/  /*not necessary as .slidescontainer > div {} already sets all the div inside as flexbox*/
+  flex-direction: column;
+  padding: 2rem 0;   /*Necessary for formatting text areas*/
+}
+
+
+
+.slidescontainer > div:hover {
+  text-shadow: 5px 5px 4px rgb(184, 183, 183);
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.slidescontainer > div > .image {
+  overflow: hidden;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;  /*make image container a flex to justify image into center-aligned*/
+}
+
+
+.slidescontainer > div > .image img {
+  width: 600px;
+  object-fit: cover;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+
+.slidescontainer > div:hover img {
+  transform: scale(1.3);
+  /*transition-duration: 1.2s;*/
+}
+
+
+.slidescontainer > div .slidetext {
+  padding-top: 1rem;
+}
+
+.finalwrapper {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  width: 600px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.finalwrapper .gyminu {
+  width: 36%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-right: 1rem;
+}
+.finalwrapper .gyminu img {
+  display: block;
+  align-items: center;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.finalwrapper .gyminfo {
+  width: 64%;
+  flex-direction: column;
+  font-size: 16px;
+  text-align: justify;
+}

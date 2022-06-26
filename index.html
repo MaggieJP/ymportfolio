@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylemain.css">
+  <title>Yujing Ma | Portfolio</title>
+</head>
+<body>
+
+  <div class="btnwrap">
+    <div class="btn" onclick="location.href='index.html';">
+      <div class="icon"><img src="sourcepics/house-user-solid.svg" alt="homepage"></div>
+      <span>Home page</span>
+    </div>
+
+    <script>
+      function sendEmail()
+      {
+        window.location = "mailto:yujing.ma929@gmail.com";
+      }
+    </script>
+    <div class="btn" onclick="sendEmail();">
+      <div class="icon"><img src="sourcepics/envelope-solid.svg" alt="email"></div>
+      <!-- <span><a href="mailto:yujing.ma929@gmail.com">Contact me</a></span>  - with Javascript, this's unnecessary!-->  
+      <span>Contact me</span>
+    </div>
+
+    <div class="avatar">
+      <img src="sourcepics/ym.jpg">
+    </div>
+    
+  </div>
+
+  <div class="header-container">
+    <div class="blur-container">
+      <h4><em>We are made of star stuff. 
+        <br>
+        We are a way for the cosmos to know itself. - Carl Sagan</em></h4>
+    </div>
+  </div>
+
+
+  <div class="static-txt-container">
+    <div class="static-content">Hello, I am</div>
+  </div>
+  <div class="wrapper">
+    <div class="ul-container">
+      <ul class="dynamic-txt">
+        <li><span>Yujing Ma, aka, Maggie</span></li>
+        <li><span>a material scientist</span></li>
+        <li><span>a hobbyist programmer</span></li>
+        <li><span>a muscle building aficionado&nbsp;</span></li>
+        <li><span>an instrumental music fan</span></li>
+        <li><span>a dog lover</span></li>
+        <li><span>a sunset enthusiast</span></li>
+      </ul>
+    </div>   
+  </div>
+  
+  <div class="subtitle">
+    <p style="font-family: sans-serif;">Welcome to my portfolio website!</p>
+  </div>
+
+  <hr>
+
+  <div class="content-wrapper">
+    <div class="slider">  <!-- outer container, not flex! for everything including the anchors -->
+      <a href="#slide-1">1</a>  <!-- anchors: href = # + ID locator -->
+      <a href="#slide-2">2</a>
+      <a href="#slide-3">3</a>
+      <a href="#slide-4">4</a>
+  
+      <div class="slidescontainer">
+          <div id="slide-1" onclick="window.open('https://scholar.google.com/citations?user=QEo2NHgAAAAJ&hl=en','mywindow');">
+            <div class="image">
+              <img src="https://images.unsplash.com/photo-1513185041617-8ab03f83d6c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80">
+            </div>
+            <div class="infocontent">
+              <p class="slidetext">Google Scholar Page</p>
+            </div>
+          </div>
+
+          <div id="slide-2" onclick="window.open('mycv.html','mywindow2');">
+            <div class="image">
+              <img src="https://images.unsplash.com/photo-1635492491273-455af7728453?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1260&q=80">
+            </div>
+            <div class="infocontent">
+              <p class="slidetext">Experiences &amp; Skill Sets</p>
+            </div>
+          </div>
+
+          <div id="slide-3" onclick="window.open('https://open.spotify.com/playlist/21zLSC607TOFiWO3ajY2N2?si=653570515aec44d2','mywindow3');">
+            <div class="image">
+              <img src="https://images.unsplash.com/photo-1614680376593-902f74cf0d41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80">
+            </div>
+            <div class="infocontent">
+              <p class="slidetext">My Awesome Playlist</p>
+            </div>
+          </div>
+
+          <div id="slide-4">
+            <div class="finalwrapper">
+
+              <div class="gyminu"><img src="sourcepics/gyminu.jpg"></div>
+              <div class="gyminfo">
+                <p>
+                  <span style="font-size: 22px; font-weight: 700; display: block; text-align: center;">Coming up soon!</span>
+                  <br>
+                  About body building and muscle training, it is another passion of mine and a great source of confidence and positive mindset. It is all about muscle hypertrophy and nutrition science. Getting stronger, leaner, healthier is a life-long journey...
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+      </div> 
+    </div>
+  </div>
+
+  <footer class="footer-container">
+    <div class="footer">
+      <P style="font-family: Arial;">&copy; Yujing Ma, Ph.D.  2022</P>
+    </div>
+  </footer>
+
+</body>
+</html>

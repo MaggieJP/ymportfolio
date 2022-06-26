@@ -1,0 +1,421 @@
+/*
+Nice color codes:
+
+box-shadow purpose background color == #f2f3f7 
+box-shadow: 0.6rem 0.6rem 1.2rem #d2dce9, -0.5em -0.5em 1em #ffffff;
+
+USF BULL COLOR == #006747
+
+APPLE black == #1d1d1f
+APPLE gray == #6e6e73
+
+*/
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Courier, monospace;
+}
+
+html, body {
+  min-height: 100vh;  /*initial body height take 100% of viewport height*/
+  background-color: #f2f3f7;
+}
+
+.footer-container {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+}
+
+.footer-container .footer {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  margin-top: 6rem;
+}
+
+hr {
+  margin-top: 3rem;
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 9px 9px -11px rgba(0, 0, 0, 0.3);
+}
+
+/* ============== side nav buttons ===================*/
+
+.btnwrap {
+  /* could not:  display: flex;  to achieve vertical alignment*/
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 199;
+}
+
+.btnwrap .btn {
+  display: block;
+  height: 70px;
+  width: 70px;
+  margin: 15px 0px;
+  text-align: center;
+  /* float: left; */
+  overflow: hidden;
+  background-color: #f2f3f7;
+  box-shadow: 0.6rem 0.6rem 1.2rem #d2dce9, -0.5em -0.5em 1em #ffffff;
+  border-radius: 3rem;
+  transition: all 0.4s ease-out;
+  cursor: pointer;
+}
+
+.btn .icon {
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  border-radius: 1rem;
+  float: left;
+  /* box-shadow: inset -7px, -7px 20px 0; */
+}
+
+.btn .icon img {
+  display: block;
+  margin: 12px 13px;  /*customize alignment for Edge..*/
+  width: 45px;
+  height: 45px;
+  line-height: 70px;
+}
+
+.btn span {
+  /* text-align: center; */
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 70px;
+  color:#646669
+}
+
+.btn:hover {
+  width: 260px;   /* =========== need slight clearance ============ */
+  transition: all 0.4s ease-out;
+}
+.btn:active {
+  background-color: #646669;
+}
+
+.btnwrap .avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  width: 220px;
+  margin: 15px 0px;
+  background-color: #f2f3f7;
+  box-shadow: 0.6rem 0.6rem 1.2rem #d2dce9, -0.5em -0.5em 1em #ffffff;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+.btnwrap .avatar img {
+  width: 86%;
+  height: 86%;
+  border-radius: 50%;
+  transition: transform 0.6s;
+}
+
+.btnwrap .avatar:hover img {
+  transform: scale(1.5);
+}
+
+
+/*========== page content ========*/
+.grid-wrapper {
+  margin-left: 280px;   /* =========== give slight clearance ============ */
+  margin-right: 80px;
+  margin-top: 2rem;
+}
+
+.section-title {
+  display: inline-block;
+  border: 3px solid #646669;
+  border-top: none;
+  border-bottom: none;
+  transform: skewX(-20deg);
+  font-size: 20px;
+  color: #646669;
+  padding: 0.6rem 2rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  grid-auto-rows: 400px;  /* !!! grid-template-rows: 500px; only works for first row !!!*/
+  row-gap: 2rem;
+  column-gap: 4rem;
+  margin-top: 2rem;
+
+  align-items: center;
+  justify-items: left;
+}
+
+/*========== flip card ========*/
+.card {
+  position: relative;
+  width: 400px;   /*---Important Para!---*/
+  height: 360px;  /*---Important Para!---*/
+  background-color: #888888;
+  text-align: center;
+  border: 3px solid #4a4a4a;
+  border-radius: 2rem;
+  box-shadow: 6px 9px 26px #666666;
+   /* ========== editing purpose toggle ============ */
+  overflow: hidden; 
+}
+
+.card-data {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-360px);  /* = card height px */
+  transition: transform 0.5s;  
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s 0.35s;
+  border-radius: 2px;
+}
+
+.card-title {
+  font-size: 26px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 13px;  /* otherwise, how to align vertically...*/
+  color: #fff;
+  background-color: #4a4a4a;   
+  margin-top: 1rem;
+
+}
+
+.card-info {
+  margin-top: 1rem;
+  margin-bottom: 6px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.card-button {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #e8e8ed;
+  color: #1d1d1f;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.card:hover .card-data {
+  transform: translateY(0px);
+}
+
+.card:hover .card-img {
+  transform: translateY(360px);  /* = card height px */
+  transition-delay: 0s;  /*default is NOT 0s ! */
+}
+
+.card-button:hover {
+  background-color: #ffcd44;
+}
+
+.card a:active {
+  background-color: gray;
+}
+
+
+/*================== bullet info content ==================*/
+
+.bullet-info {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  column-gap: 1rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.bullet-info .iconbox {
+  display: flex;  /*alway set the outter layer to be flex first!!*/
+  width: 200px;
+  height: 200px;
+  background-color: #f2f3f7;
+  border-radius: 3rem;
+  box-shadow: 0.6rem 0.6rem 1.2rem #d2dce9, -0.5em -0.5em 1em #ffffff;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.iconbox > img {
+  height: 60%;
+  width: 60%;
+  object-fit: cover;
+  border-radius: 30%;
+}
+
+
+.bullet-info .textinfo .headline h3 {
+  /* color: #006747;  should not apply to all items*/
+  font-size: 24px;
+  margin-bottom: 1rem; 
+}
+
+.bullet-info .textinfo .infocontent p {
+  font-size: 20px;
+  color: #6e6e73;   /* #6e6e73 -> Apple gray! */
+  margin-top: 0; 
+  margin-bottom: 1rem;
+}
+.bullet-info .textinfo .infocontent > a {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+
+.language-category {
+  display: block;
+  font-size: 30px;
+  margin: 2rem 2rem;
+  color: #646669;
+  text-shadow: 3px 9px 8px rgb(120, 120, 120);
+}
+
+
+/*============== langauge skills ===================*/
+.skills-container {
+  width: 60rem;
+  list-style: none;
+  list-style-type: none;
+  margin: 1rem auto 8rem 5rem;  /* =====!!!NOTE: top | right | bottom | left =====*/
+  color: #646669;
+}
+
+/* ======== have to duplicate markup for both bundles- for shapes ======== */
+.lingualbars-bundle h2 {
+  font-weight: 700;
+  display: inline-block;
+  margin: 1rem 0.6rem;
+}
+.programmingbars-bundle h2 {
+  font-weight: 700;
+  display: inline-block;
+  margin: 1rem 0.6rem;
+}
+
+
+.lingualbars-bundle li {
+  margin: 1rem 0 3rem 0;
+}
+.programmingbars-bundle li {
+  margin: 1rem 0 3rem 0;
+}
+
+
+.lingualbars-bundle .bar {
+  background: #ececec;
+  display: block;
+  border: 1px solid 8px #ececec;
+  border-radius: 1rem;
+  height: 3rem;
+  overflow: hidden;
+  box-shadow: -6px -6px 7px rgba(255, 255, 255, 0.5), 7px 7px 7px rgba(70, 70, 70, 0.2), inset -6px -6px 7px rgba(255, 255, 255, 0.5), inset 7px 7px 7px rgba(70, 70, 70, 0.2);
+  box-sizing: border-box;
+  position: relative;
+}
+.programmingbars-bundle .bar {
+  background: #ececec;
+  display: block;
+  border: 1px solid 8px #ececec;
+  border-radius: 1rem;
+  height: 3rem;
+  overflow: hidden;
+  box-shadow: -6px -6px 7px rgba(255, 255, 255, 0.5), 7px 7px 7px rgba(70, 70, 70, 0.2), inset -6px -6px 7px rgba(255, 255, 255, 0.5), inset 7px 7px 7px rgba(70, 70, 70, 0.2);
+  box-sizing: border-box;
+  position: relative;
+}
+
+
+.lingualbars-bundle .progress {
+  height: 70%;   /* parent -> <span class=bar> */
+  float: left;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin: 0 0.6rem;
+  border-radius: 0.6rem;
+  animation: fill 10s ease-in;
+  transform: translateY(-50%);
+}
+.programmingbars-bundle .progress {
+  height: 70%;   /* parent -> <span class=bar> */
+  float: left;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin: 0 0.6rem;
+  border-radius: 0.6rem;
+  animation: fill 10s ease-in;
+  transform: translateY(-50%);
+}
+
+@keyframes fill {
+  0% {width: 0;}
+}
+
+/* ========= individually coloring ===================*/
+.lingualbars-bundle li:nth-child(1) .progress {
+  width: 98%;  
+  background: linear-gradient(90deg, #ffaf75 0%, #ff720d 100%);
+}
+.lingualbars-bundle li:nth-child(2) .progress {
+  width: 96%; 
+  background: linear-gradient(90deg, #7eb9f1 0%, #2187e7 100%);
+}
+.lingualbars-bundle li:nth-child(3) .progress {
+  width: 30%;  
+  background: linear-gradient(90deg, #cc75ff 0%, #a60dff 100%);
+}
+
+
+.programmingbars-bundle li:nth-child(1) .progress {
+  width: 40%;
+  background: linear-gradient(90deg, #fcf094 0%, #ffe30d 100%);
+}
+.programmingbars-bundle li:nth-child(2) .progress {
+  width: 70%;
+  background: linear-gradient(90deg, #6ee2f5 0%, #2d93f8 100%);
+}
+.programmingbars-bundle li:nth-child(3) .progress {
+  width: 86%;
+  background: linear-gradient(90deg, #f7ce38 0%, #fc210d 100%);
+}
+.programmingbars-bundle li:nth-child(4) .progress {
+  width: 96%;
+  background: linear-gradient(90deg, #93dee4 0%, #32ccbc 100%);
+}
+.programmingbars-bundle li:nth-child(5) .progress {
+  width: 78%;
+  background: linear-gradient(90deg, #ff5789 0%, #a704fd 100%);
+}
+.programmingbars-bundle li:nth-child(6) .progress {
+  width: 10%;
+  background: linear-gradient(90deg, #dfec51 0%, #73aa0a 100%);
+}
+
+
