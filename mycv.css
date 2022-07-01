@@ -119,6 +119,7 @@ hr {
   width: 86%;
   height: 86%;
   border-radius: 50%;
+  transform: rotate(-9deg);
   transition: transform 0.6s;
 }
 
@@ -149,10 +150,10 @@ hr {
 
 .section-grid {
   display: grid;
-  grid-template-columns: 450px 1fr;
+  grid-template-columns: 30% 1fr;
   grid-auto-rows: 400px;  /* !!! grid-template-rows: 500px; only works for first row !!!*/
   row-gap: 2rem;
-  column-gap: 4rem;
+  column-gap: 2rem;
   margin-top: 2rem;
 
   align-items: center;
