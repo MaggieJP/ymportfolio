@@ -177,7 +177,7 @@ html, body {
 
 .wrapper .ul-container {
   padding-left: 3rem;
-  padding-right: 3rem;
+  padding-right: 3.5rem;
   height: 90px;
   display: flex;
   justify-content: center;
@@ -199,7 +199,7 @@ html, body {
   color: rgba(150, 150, 150, 0.8);
   width: 6px;
   height: 40px;
-  margin-left: 0.5rem;
+  margin-left: 0.4rem;
   animation: blinky 1s infinite;
 }
 @keyframes blinky {
