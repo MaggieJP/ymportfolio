@@ -179,14 +179,38 @@ html, body {
   padding-left: 2rem;
   padding-right: 2rem;
   height: 90px;
-  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   background-color: #f2f3f7;
   border-radius: 5rem;
   box-shadow: 0.6rem 0.6rem 1.2rem #d2dce9, -0.5em -0.5em 1em #ffffff;
 }
 
+.ul-container span.typed-text {
+  font-size: 40px;
+  font-weight: 700;
+  color: #646669;
+}
 
+.ul-container span.cursor {
+  display: inline-block;
+  color: rgba(150, 150, 150, 0.8);
+  width: 6px;
+  height: 40px;
+  margin-left: 0.5rem;
+  animation: blinky 1s infinite;
+}
+@keyframes blinky {
+  0%  { background-color: rgba(150, 150, 150, 0.8); }
+  49% { background-color: rgba(150, 150, 150, 0.8); }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: rgba(150, 150, 150, 0.8); }
+}
+
+/* 
 .dynamic-txt {
   height: 90px;
   line-height: 90px;
@@ -204,31 +228,29 @@ html, body {
 }
 
 @keyframes slideup {
-  100%{top: -630px;}  /*sliding up animation -> # of lines X each line height*/
+  100%{top: -630px;}  
 }
 
 .dynamic-txt li span {
-  position: relative;  /*for span::after absolute positioning*/
+  position: relative; 
   line-height: 90px;
 }
 
 .dynamic-txt li span::after {
   content: "";
-  /* z-index: 99; */
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   border-left: 3px solid #646669;
-  /* background-color: rgba(233,0,2,0.3); */
   background-color: #f2f3f7;
   animation: typing 3s steps(20) infinite;
 }
 
 @keyframes typing {
   100%{left: 110%;}
-}
+} */
 
 
 .subtitle {
