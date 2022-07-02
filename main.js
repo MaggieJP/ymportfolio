@@ -1,7 +1,7 @@
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["Yujing Ma", "a Material Scientist", "a Hobbyist Programmer", "a Muscle Building Aficionado", "an Instrumental Music Fan", "a Dog Lover", "a Sunset Enthusiast"];
+const textArray = ["Yujing Ma", "a Material Scientist", "a Hobbyist Programmer", "a Muscle training Aficionado and self-certified nutritionist", "a Music Fan, Dog Lover, and Sunset Enthusiast"];
 const typingDelay = 150;
 const erasingDelay = 80;
 const newTextDelay = 700; // Delay between current and next text
