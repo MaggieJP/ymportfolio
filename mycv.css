@@ -1,16 +1,3 @@
-/*
-Nice color codes:
-
-box-shadow purpose background color == #f2f3f7 
-box-shadow: 0.6rem 0.6rem 1.2rem #d2dce9, -0.5em -0.5em 1em #ffffff;
-
-USF BULL COLOR == #006747
-
-APPLE black == #1d1d1f
-APPLE gray == #6e6e73
-
-*/
-
 
 * {
   padding: 0;
@@ -137,15 +124,25 @@ hr {
 
 .section-title {
   display: inline-block;
-  border: 3px solid #646669;
-  border-top: none;
-  border-bottom: none;
-  transform: skewX(-20deg);
-  font-size: 20px;
-  color: #646669;
-  padding: 0.6rem 2rem;
-  margin-left: 2rem;
-  margin-top: 2rem;
+/*   border: 3px solid #646669; */
+/*   border-top: none; */
+/*   border-bottom: none; */
+/*   transform: skewX(-20deg); */
+/*   font-size: 20px; */
+  color: #bad1e5;
+  padding: 0rem 1rem;
+/*   margin-left: 2rem; */
+/*   margin-top: 2rem; */
+}
+
+.section-title span {
+  font-size: 68px;
+  font-weight: 800;
+  font-style: italic;
+  text-shadow: -0.1em 0.1em 0.16em rgba(0, 0, 0, 0.5);
+}
+.section-title span:not(:first-child) {
+  margin-left: -14px;
 }
 
 .section-grid {
@@ -170,7 +167,6 @@ hr {
   border: 3px solid #4a4a4a;
   border-radius: 2rem;
   box-shadow: 6px 9px 26px #666666;
-   /* ========== editing purpose toggle ============ */
   overflow: hidden; 
 }
 
@@ -291,10 +287,9 @@ hr {
 
 .language-category {
   display: block;
-  font-size: 30px;
-  margin: 2rem 2rem;
-  color: #646669;
-  text-shadow: 3px 9px 8px rgb(120, 120, 120);
+  font-size: 20px;
+  margin: 2rem 1rem;
+  color: #505050;
 }
 
 
