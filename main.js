@@ -2,7 +2,7 @@ const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
 const textArray = ["Yujing Ma", "a Material Scientist", "a Hobbyist Programmer", "a Muscle training Aficionado, self-certified Nutritionist", "a Music Fan, Dog Lover, Sunset Enthusiast"];
-const typingDelay = 10;
+const typingDelay = 100;
 const erasingDelay = 40;
 const newTextDelay = 500; // Delay between current and next text
 let textArrayIndex = 0;
