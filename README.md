@@ -1,6 +1,6 @@
 # ymportfolio
 
-## A Repository for my personal website, published by Github page
-### Here is the [link](https://maggiejp.github.io/ymportfolio/) to the webpage
+## A repository for my personal portfolio website that I made from scratch with HTML, CSS and JavaScript.
+### Host and published by Github, here is the [link](https://maggiejp.github.io/ymportfolio/) to the webpage. All rights reserved.
 
-> Currently under constant updating and maintenance
+> Currently under constant maintenance & updates
