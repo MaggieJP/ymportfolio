@@ -1,10 +1,10 @@
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["Yujing Ma", "a Material Scientist", "a Hobbyist Programmer", "a Muscle training Aficionado and self-certified nutritionist", "a Music Fan, Dog Lover, and Sunset Enthusiast"];
-const typingDelay = 150;
-const erasingDelay = 80;
-const newTextDelay = 700; // Delay between current and next text
+const textArray = ["Yujing Ma", "a Material Scientist", "a Hobbyist Programmer", "a Muscle training Aficionado, self-certified Nutritionist", "a Music Fan, Dog Lover, Sunset Enthusiast"];
+const typingDelay = 10;
+const erasingDelay = 40;
+const newTextDelay = 500; // Delay between current and next text
 let textArrayIndex = 0;
 let charIndex = 0;
 
@@ -37,5 +37,5 @@ function erase() {
 }
 
 document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-  if(textArray.length) setTimeout(type, newTextDelay + 250);
+  if(textArray.length) setTimeout(type, newTextDelay + 100);
 });
