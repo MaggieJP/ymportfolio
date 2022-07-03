@@ -178,7 +178,8 @@ html, body {
 .wrapper .ul-container {
   padding-left: 3rem;
   padding-right: 3.5rem;
-  height: 90px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -256,9 +257,9 @@ html, body {
 .subtitle {
   display: flex;
   justify-content: center;
+  text-align: center;
   margin-top: 3rem;
   margin-bottom: 3rem;
-  /* text-align: center; */
   color: #646669;
   font-size: 46px;
   font-weight: 700;
@@ -269,7 +270,7 @@ html, body {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text; /*???? why css lint ask to also define this???*/
-  animation: glitter 22s linear infinite;
+  animation: glitter 26s linear infinite;
 }
 @keyframes glitter{
   0%{background-position: 0%;}
